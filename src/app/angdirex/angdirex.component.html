@@ -1,0 +1,18 @@
+<p>angdirex works!</p>
+<ul>
+    <li *ngFor="let pros of lstproduts">
+        {{pros.id}} {{pros.proname}}
+         <p *ngIf="pros.isAvailable; else notAvailable">Product is available </p>
+         <ng-template #notAvailable>
+            Product is not available
+         </ng-template>
+    </li>
+</ul>
+
+<h2>userrole</h2>
+<div [ngSwitch]="userRole">
+    <p *ngSwitchCase="'admin'">Welcome, Admin</p>
+    <p *ngSwitchCase="'User'">Welcome, User</p>
+    <p *ngSwitchCase="'Manager'">Welcome, Manager</p>
+    <p *ngSwitchDefault>Unknown Role</p>
+</div>

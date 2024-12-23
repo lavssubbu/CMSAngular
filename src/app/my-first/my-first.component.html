@@ -1,0 +1,21 @@
+<p>my-first works!</p>
+
+<!--Interpolation {{}}-->
+<h1>{{OrgName}}</h1>
+<img src="{{imageurl}}" height="100px" width="400px">
+<!--Property binding []-->
+<img [src]="imageurl" height="100px" width="400px">
+
+<!--EventBinding ()-->
+<button (click)="Counter()">ClickMe</button>
+<p>Counter Value:{{count}}</p>
+
+<!--Comibining Property binding and event binding-->
+<h4>{{fname}}{{lname}}</h4>
+<button [disabled]="butval" (click)="display()" class="btn btn-primary">Click</button>
+
+
+<!--TwoWayBinding-->
+<br/>
+<input type="text" name="value" [(ngModel)]="value">
+<p>You have entered {{value}}</p>
